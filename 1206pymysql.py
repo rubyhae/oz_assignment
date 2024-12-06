@@ -104,7 +104,7 @@ try:
         """
         cursor.execute(sql)
 
-        sql = " SELECT * FROM stock ORDERED BY create_at DESC LIMIT 3 "
+        sql = " SELECT * FROM stock ORDER BY create_at DESC LIMIT 3 "
         cursor.execute(sql)
         
         show = cursor.fetchall()
@@ -119,7 +119,7 @@ try:
         JOIN sales_items on sales_items.sales_record_id = sales_record.id
         JOIN products on products.id = sales_item.product_id
         WHERE user.first_name = '8ki'
-        ORDERED BY product.price DESC
+        ORDER BY product.price DESC
         """
         cursor.execute(sql)
 
